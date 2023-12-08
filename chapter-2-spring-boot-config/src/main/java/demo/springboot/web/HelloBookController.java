@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Spring Boot Hello案例
- *
+ * <p>
  * Created by bysocket on 26/09/2017.
  */
 @RestController
@@ -19,6 +19,7 @@ public class HelloBookController {
     @GetMapping("/book/hello")
     public String sayHello() {
         return "Hello， " + bookProperties.getWriter() + " is writing "
-                + bookProperties.getName() + " ！";
+                + bookProperties.getName() + " ！, desc about:" + bookProperties.getDescription()
+                + "，user.name:" + bookProperties.getUserName();
     }
 }

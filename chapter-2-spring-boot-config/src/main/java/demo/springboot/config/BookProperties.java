@@ -23,6 +23,12 @@ public class BookProperties {
     @Value("${demo.book.writer}")
     private String writer;
 
+    @Value("${demo.book.description}")
+    private String description;
+
+    @Value("${user.name}")
+    private String userName;
+
     public String getName() {
         return name;
     }
@@ -37,5 +43,23 @@ public class BookProperties {
 
     public void setWriter(String writer) {
         this.writer = writer;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public BookProperties setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public BookProperties setUserName(String userName) {
+        this.userName = userName;
+        return this;
     }
 }
